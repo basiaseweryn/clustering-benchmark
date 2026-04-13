@@ -54,6 +54,30 @@ produced by DBSCAN,
 - coverage (the percent of points which have not been classified as noise).
 All further analyses have been performed on these data frames.
 
+### Algorithm performance and stability
+
+<img width="910" height="624" alt="mean_ari_vs_std_var_per_model" src="https://github.com/user-attachments/assets/c0dc735c-6b0c-4354-988a-1aaf1461bb62" />
+
+This visualisation represents the accuracy and stability of the clustering algorithms. The genie model, with different g parameter values, achieves high mean ARI, with low standard deviation as the same time.
+The genie algorithm for g = 0.3 achieves not only the best average ARI value, but also has very stable performance across across all datasets.
+
+### Mean dataset difficulty
+
+<img width="1001" height="633" alt="mean_ari_per_dataset" src="https://github.com/user-attachments/assets/cbf41c84-43a3-4190-8ea8-a2b91e045eaf" />
+
+Mean ARI achieved by all algorithms dor each of the datasets, with respect to their battery.The uci battery was the most difficult on average.
+
+### DBSCAN - performance and number of clusters estimation
+
+<img width="563" height="455" alt="dbscan_k_comparison" src="https://github.com/user-attachments/assets/0f2943e5-e6dd-4501-86e9-0757efd0ac21" />
+
+Finding the right number of clusters is a significant DBSCAN issue. The algorithms under- or overestimated the number of clusters for 56% of the datasets.
+
+
+<img width="989" height="396" alt="dbscan_k_case_boxplots" src="https://github.com/user-attachments/assets/22778a68-5124-48cf-9d6d-986c2eb9fd07" />
+
+Internal validation measures, especially Silhouette, which prefers spherical clusters, while DBSCAN can produce irregularly shaped ones, may indicate good clustering quality even when the clustering structure is incorrect.
+
 ### Summary of outcomes:
 
 1. The Genie algorithm achieves the best overall performance,
